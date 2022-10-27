@@ -50,6 +50,10 @@ body > nav {
     text-decoration: underline;
  }
 
+ .submenu {
+   font-size: 0.75em;
+ }
+
 /*footer styles */
 
  body > footer address{
