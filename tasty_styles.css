@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+/* font style downloaded from internet */
+@font-face {
+   font-family: Cake;
+   src: url(CakeFont.ttf) format('truetype');
+}
+
+/* main body styles */
+
+body{
+   color: rgb(91,91,91);
+   background-color: white;
+   font-family: Verdana, Geneva, sans-serif;
+   overflow-x: hidden;
+}
+
+/* top banner styles: picture + title  */
+
+body > header > p {
+   font-family: Cake, sans-serif;
+   font-size: 4em;
+   color: black;
+   background-color: #abdbe3;
+   border-radius: 100px;
+}
+
+/* Navigation bar Styles */
+
+body > nav {
+    background-color: #ffc7f6;
+    border-radius: 20px;
+ }
+ 
+ nav > ul {
+    list-style-type: none;
+    color: black;
+    font-family: Cake, sans-serif;
+ }
+
+ nav > ul  li > a:visited, nav > ul  li > a:link
+ {
+    color: black;
+    text-decoration: none;
+ }
+ 
+ nav > ul  li > a:hover, nav > ul  li > a:active
+ {
+    color: rgb(149, 143, 140);
+    text-decoration: underline;
+ }
+
+/*footer styles */
+
+ body > footer address{
+    background-color: #abdbe3;
+    color: white;
+    color: rgba(109, 105, 105, 0.6);
+    font: normal small-caps bold 0.9em/3em
+          Nobile, Verdana, Geneva, sans-serif;
+    text-align: center;
+    border-radius: 100px;
+ }
+
