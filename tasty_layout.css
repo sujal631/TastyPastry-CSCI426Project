@@ -2,6 +2,10 @@
 
 /* main body styles */
 
+html {
+   background-attachment: fixed;
+}
+
 body{
    width: 95%;
    min-width: 640px;
@@ -25,7 +29,7 @@ body > header > img {
 	padding: 0px;
    width: 100%;
    opacity: 65%;
-   z-index: -1;
+   z-index: 0;
    position: relative;
 }
 

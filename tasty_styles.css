@@ -7,6 +7,11 @@
 }
 
 /* main body styles */
+html{
+   background-image: url(backimage.jpg);
+   background-repeat: repeat;
+   background-size: contain;
+}
 
 body{
    color: rgb(91,91,91);
