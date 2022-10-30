@@ -2,72 +2,129 @@
 
 /* font style downloaded from internet */
 @font-face {
-   font-family: Cake;
-   src: url(CakeFont.ttf) format('truetype');
+  font-family: Cake;
+  src: url(CakeFont.ttf) format('truetype');
 }
 
 /* main body styles */
-html{
-   background-image: url(backimage.jpg);
-   background-repeat: repeat;
-   background-size: contain;
+html {
+  background-image: url(backimage.jpg);
+  background-repeat: repeat;
+  background-size: contain;
 }
 
-body{
-   color: rgb(91,91,91);
-   background-color: white;
-   font-family: Verdana, Geneva, sans-serif;
-   overflow-x: hidden;
+body {
+  color: rgb(91, 91, 91);
+  background-color: white;
+  font-family: Verdana, Geneva, sans-serif;
+  overflow-x: hidden;
 }
 
 /* top banner styles: picture + title  */
 
 body > header > p {
-   font-family: Cake, sans-serif;
-   font-size: 4em;
-   color: black;
-   background-color: #abdbe3;
-   border-radius: 100px;
+  font-family: Cake, sans-serif;
+  font-size: 4em;
+  color: black;
+  background-color: #abdbe3;
+  border-radius: 100px;
 }
 
 /* Navigation bar Styles */
 
 body > nav {
-    background-color: #ffc7f6;
-    border-radius: 20px;
- }
- 
- nav > ul {
-    list-style-type: none;
-    color: black;
-    font-family: Cake, sans-serif;
- }
+  background-color: #ffc7f6;
+  border-radius: 20px;
+}
 
- nav > ul  li > a:visited, nav > ul  li > a:link
- {
-    color: black;
-    text-decoration: none;
- }
- 
- nav > ul  li > a:hover, nav > ul  li > a:active
- {
-    color: rgb(149, 143, 140);
-    text-decoration: underline;
- }
+nav > ul {
+  list-style-type: none;
+  color: black;
+  font-family: Cake, sans-serif;
+}
 
- .submenu {
-   font-size: 0.75em;
- }
+nav > ul li > a:visited,
+nav > ul li > a:link {
+  color: black;
+  text-decoration: none;
+}
+
+nav > ul li > a:hover,
+nav > ul li > a:active {
+  color: rgb(149, 143, 140);
+  text-decoration: underline;
+}
+
+.submenu {
+  font-size: 0.75em;
+}
 
 /*footer styles */
 
- body > footer address{
-    background-color: #abdbe3;
-    color: white;
-    color: rgba(109, 105, 105, 0.6);
-    font: normal small-caps bold 0.9em/3em
-          Nobile, Verdana, Geneva, sans-serif;
-    text-align: center;
-    border-radius: 100px;
- }
+body > footer address {
+  background-color: #abdbe3;
+  color: white;
+  color: rgba(109, 105, 105, 0.6);
+  font: normal small-caps bold 0.9em/3em Nobile, Verdana, Geneva, sans-serif;
+  text-align: center;
+  border-radius: 100px;
+}
 
+/* menu styles */
+.wrapper {
+  width: 100%;
+  margin: 40px auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.title h4 {
+  font-family: Cake, sans-serif;
+  color: black;
+  text-transform: capitalize;
+  font-size: 50px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.single-menu {
+  flex-basis: 450px;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid rgb(236, 236, 236);
+  display: flexbox;
+  flex-direction: row;
+  align-items: center;
+}
+.single-menu:hover img {
+  border-radius: 0;
+}
+
+.single-menu img {
+  max-width: 400px;
+  max-height: 400px;
+  margin: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  border-radius: 10%;
+}
+.single-menu h4 {
+  text-transform: none;
+  font-size: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #000;
+  margin-bottom: 5px;
+}
+.single-menu h4 span {
+  float: right;
+  font-size: 20px;
+  color: #2f808f;
+  font-weight: bold;
+}
