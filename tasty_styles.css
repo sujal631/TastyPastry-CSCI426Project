@@ -41,6 +41,8 @@ nav > ul {
   list-style-type: none;
   color: black;
   font-family: Cake, sans-serif;
+  background-color: #ffc7f6;
+  border-radius: 20px;
 }
 
 nav > ul li > a:visited,
