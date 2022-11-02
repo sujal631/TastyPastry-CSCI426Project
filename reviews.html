@@ -8,6 +8,65 @@
    <link href="tasty_styles.css" rel="stylesheet" />
    <title>Mmm Tasty! It's a Pastry!</title>
 
+   <style>
+      .reviewSection
+      {
+         width: 82%;
+         float: right;
+         margin: 0 0 5% 2%;
+      }
+
+      .reviewSection img {
+         float: left;
+         width: 20%;
+         margin: 5px 20px 10px 0px;
+         border-radius: 10px;
+      }
+
+      .review {
+         clear: left;
+      }
+
+      .likeButton p{
+         display: inline-block;
+      }
+
+      .btn {
+         width: 30px; height: 30px;
+         outline: 0;
+         border: 2px solid rgb(209, 3, 3);
+         background:rgb(209, 3, 3);
+         color: #000;
+         cursor: pointer;
+         position: relative;
+         display:inline-block;
+         border-radius: 10px;
+         font-size: 2em;
+      }
+
+      .btn-like {
+         font-size: 2em;
+         border-radius: 10px;
+         background: rgb(209, 3, 3);
+      }
+      .btn-like {
+         background: #fff;
+         border-color: #ccc;
+      }
+
+      /*-- Button Icon -- */
+      .btn-icon {
+         display: inline-block;
+         position: absolute;
+         color: #000;
+         left: 5px;
+         top: 4px;
+         height: 20px;
+      }
+
+
+
+   </style>
 </head>
 
 <body>
@@ -33,7 +92,44 @@
    </nav>
    
    <!--H1-->
-   <h1>Reviews</h1>
+   <div class="wrapper">
+      <div class="reviewTitle">
+         <h3>Reviews</h3>
+      </div>
+      <div class = "reviewSection">
+         <div class = "review">
+            <h2>Sheb Deaton</h2>
+            <img src="shebreview.jpg" />
+            <div class="quote" >
+               <blockquote>
+                  These are the best pastries I have ever had in my entire life! I make sure to come by every week
+                  to try the new doughnuts they offer! The blueberry one is my favorite (hint it's on their secret
+                  menu).
+               </blockquote>
+               <div class="likeButton">
+                  <p>Was this review helpful?</p>
+                  <button class="btn btn-like">
+                      <span class="btn-icon ">
+                          <img class = "buttonimg" src="thumbs up.png" />
+                      </span>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class = "reviewSection">
+         <div class = "review">
+            <h2>Sandip Sapkota</h2>
+            <img src="sandipreview.jpg" />
+            <div class="quote">
+               <blockquote>
+                  Everytime I come here, the staff and pastries just leave me with a big smile on my face. I love coming
+                  here, especially the location on Nelson Road!
+               </blockquote>
+            </div>
+         </div>
+      </div>
+   </div>
   
    <!--footer-->
    <footer>
@@ -41,5 +137,13 @@
       All Rights Reserved &copy; Live Laugh Love Legion &#8226; Lake Charles, LA
       </address>
    </footer>
+
+   <script type="text/javascript">
+      const button = document.querySelector('.btn')
+
+      button.addEventListener('click', () => {
+          button.classList.toggle('btn-like')
+      })
+  </script>
 </body>
 </html>

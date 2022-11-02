@@ -134,3 +134,65 @@ body > footer address {
   color: #2f808f;
   font-weight: bold;
 }
+
+/* Reviews Page */
+
+.quote {
+  background-color: rgba(171, 219, 227, 60%);
+  width: 70%;
+  float: left;
+  margin-top: 5%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #ffc7f6 ;
+}
+
+blockquote{
+  color: black;
+  /*background-color: rgba(171, 219, 227, 60%);*/
+  font-size: 1.5em;
+  font-family: Cake, sans-serif;
+  padding: 10px;
+  quotes: "\201C" "\201D";
+  /*width: 70%;
+  float: left;
+  margin-top: 5%;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px #ffc7f6 ;*/
+}
+
+blockquote::before{
+  content: open-quote;
+  font-size: 1.6em;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+blockquote::after{
+  content: close-quote;
+  font-size: 1.6em;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.reviewTitle {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.reviewTitle h3 {
+  font-family: Cake, sans-serif;
+  color: black;
+  text-transform: capitalize;
+  font-size: 50px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 6%;
+  text-shadow: -5px 5px 5px #abdbe3;
+}
+
+h2 {
+  font-family: Cake, sans-serif;
+  font-size: 2em;
+  color: black;
+  text-shadow: 2px 2px #ffc7f6;
+}
