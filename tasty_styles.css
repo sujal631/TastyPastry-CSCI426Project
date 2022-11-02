@@ -22,6 +22,10 @@ body {
 
 /* top banner styles: picture + title  */
 
+body > header {
+  border-radius: 0px 0px 20px 0px;
+}
+
 body > header > p {
   font-family: Cake, sans-serif;
   font-size: 4em;
@@ -34,7 +38,7 @@ body > header > p {
 
 body > nav {
   background-color: #ffc7f6;
-  border-radius: 20px;
+  border-radius:  0px 20px 20px 20px;
 }
 
 nav > ul {
@@ -69,7 +73,7 @@ body > footer address {
   color: rgba(109, 105, 105, 0.6);
   font: normal small-caps bold 0.9em/3em Nobile, Verdana, Geneva, sans-serif;
   text-align: center;
-  border-radius: 100px;
+  border-radius: 100px 100px 0px 0px;
 }
 
 /* menu styles */

@@ -19,19 +19,13 @@ body {
 body > header {
   margin: 0;
   padding: 0px;
-  width: 100%;
+  width: 95%;
   overflow: hidden;
-  position: relative;
+  position: fixed;
   background-image: url("headerattempt4.jpg");
-}
-
-body > header > img {
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  opacity: 65%;
-  z-index: 0;
-  position: relative;
+  min-height: 125px;
+  z-index:1;
+  top:0%;
 }
 
 body > header > p {
@@ -43,12 +37,13 @@ body > header > p {
   top: 20%;
   left: 10%;
   height: 60%;
+  min-width: 760px;
 }
 
 /* Navigation bar Styles */
 
 body > nav {
-  position: relative;
+  position: sticky;
   font-size: 2em;
   line-height: 2em;
   width: 10%;
@@ -56,7 +51,8 @@ body > nav {
   min-width: 200px;
   min-height: 50px;
   float: left;
-  top: 25%;
+  top: 124px;
+  z-index: 1;
 }
 
 nav > ul {
@@ -73,6 +69,15 @@ nav > ul {
 nav ul li:hover ul {
   display: block;
   background: inherit;
+}
+
+/*h1 layout */
+body > div, body > h1 {
+  padding-top:130px;
+}
+
+body > h1 { 
+ min-height: 520px;
 }
 
 /*footer styles */
