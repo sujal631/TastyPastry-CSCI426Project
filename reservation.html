@@ -13,7 +13,99 @@
    <link href="tasty_layout.css" rel="stylesheet" />
    <link href="tasty_styles.css" rel="stylesheet" />
    <title>Mmm Tasty! It's a Pastry!</title>
+   <style>
+      form {
+         display: -webkit-flex;
+         display: flex;
+         -webkit-flex-flow: row wrap;
+         flex-flow: row wrap;
+      } 
 
+      fieldset {
+         background-color: #abdbe3;
+         -webkit-flex: 1 1 300px;
+         flex: 1 1 300px; 
+         border-radius: 25px;
+         float: right;
+      }
+
+      textarea {
+         margin-top: 10px;
+         height: 100px;
+         width: 95%;
+      }
+
+      div.formRow {
+         display: -webkit-flex;
+         display: flex;
+         -webkit-flex-flow: row wrap;
+         flex-flow: row wrap;
+         margin: 7px 0px;
+      }
+
+      div.formRow > * {
+         -webkit-flex: 1 1 150px;
+         flex: 1 1 150px;
+      }
+
+      label {
+         text-align: center;
+         vertical-align: center;
+      }
+
+      figure {
+         text-align: center;
+         width: 49%;
+         margin: 0px 1px 0px 0px;
+      }
+
+      div#buttons {
+         text-align: center;
+         width: 100%;
+      }
+
+      input[type='submit'], input[type='reset'] {
+         padding: 5px;
+         margin-top: 1px;
+         border-radius: 25px;
+         background-color: #abdbe3;
+         color: #ffc7f6;
+         text-shadow: 0px 2px 4px black
+      }
+
+      .Radio {
+         margin: auto;
+         text-align: center;
+      }
+
+      .ReservationTitle {
+         text-align: center;
+      }
+
+      .ReservationTitle h3 {
+         font-family: Cake, sans-serif;
+         color: black;
+         text-transform: capitalize;
+         font-size: 50px;
+         position: relative;
+         display: inline-block;
+         text-shadow: -5px 5px 5px #abdbe3;
+      }
+
+      .Exterior_Interior {
+         width: 50%;
+         float: left;
+         margin: 0 0 5% 2%;
+      }
+
+      .Exterior_Interior img {
+         width: 100%;
+         margin: 5px 20px 10px 0px;
+         border-radius: 10px;
+         vertical-align: top;
+         border: 2px solid #abdbe3;
+      }
+   </style>
 </head>
 
 <body>
@@ -39,13 +131,94 @@
    </nav>
    
    <!--Reservation Page-->
-   <h1>Reservations</h1>
-  
+   <div class="wrapper">
+      <!--Title-->
+      <div class="ReservationTitle">
+         <h3>Reservations</h3>
+      </div>
+      <!--Images of Place-->
+      <div class="Exterior_Interior">
+         <figure style="float: left;">
+            <img src="exterior.jpg" >
+            <figcaption> Exterior View </figcaption>
+         </figure>
+         <figure style="float: left;">
+            <img src="interior.jpg">
+            <figcaption> Interior View </figcaption>
+         </figure>
+      </div>
+      <!--Form-->
+      <form action="http://www.example.com/redball/customer" method="post">
+         <fieldset>
+            <!--Name of Reservation-->
+            <div class="formRow">
+               <label for="name" style="color: #ffc7f6; text-shadow: 0px 2px 4px black">Name:</label>
+               <input name="reserver" id="name" type="text" placeholder="first and last name" required style="background-color: #ffc7f6;" />
+            </div>
+            <!--Type of Seating for Reservation-->
+            <div class="formRow">
+               <label style="color: #ffc7f6; text-shadow: 0px 2px 4px black">Where would you like to sit?</label>
+               <fieldset style="background-color: #ffc7f6;">
+                  <label class="Radio" for="Interior">Inside</label>
+                  <input class="Radio" name="Seating" id="Interior" value="Inside" type="radio" required />
+                  <label class="Radio" for="Exterior">Outside</label>
+                  <input class="Radio" name="Seating" id="Exterior" value="Outside" type="radio" />
+               </fieldset>
+            </div>
+            <!--Date of Reservation-->
+            <div class="formRow">
+               <label for="date" style="color: #ffc7f6; text-shadow: 0px 2px 4px black">Date of Reservation:</label>
+               <input name="reservation" id="date" type="date" required style="background-color: #ffc7f6;" />
+            </div>  
+            <!--Time of Reservation-->
+            <div class="formRow">
+               <label for="time" style="color: #ffc7f6; text-shadow: 0px 2px 4px black">Time of Reservation:</label>
+               <input name="reservation" id="time" type="time" required style="background-color: #ffc7f6;"/>
+            </div>
+            <!--Comments for Reservation-->
+            <div class="formRow">
+               <textarea id="comments" name="comments" placeholder="Comments for Reservation" style="background-color: #ffc7f6;"></textarea>
+            </div>
+         </fieldset>
+         <!--Submit/Cancel Buttons-->
+         <div id="buttons">
+            <input type="submit" value="Submit Reservation" />
+            <input type="reset" value="Cancel" />
+         </div>
+      </form>
+   </div>
+
    <!--footer-->
    <footer>
       <address>
       All Rights Reserved &copy; Live Laugh Love Legion &#8226; Lake Charles, LA
       </address>
    </footer>
+
+   <!--Javascript Functions-->
+   <script type="text/javascript">
+      /*For Form Validation*/
+      window.onload = setForm;
+      function setForm() {
+         /*Confirmation Box using Form Values*/
+         document.forms[0].onsubmit = function() {
+            var name = document.getElementById("name").value;
+            var comments = document.getElementById("comments").value;
+            var date = document.getElementById("date").value;
+            var time = document.getElementById("time").value;
+            var seat = document.getElementsByName("Seating");
+            for(i=0;i<seat.length;i++) {
+               if(seat[i].checked)
+                  seat = seat[i].value;
+            }
+            if (this.checkValidity()) confirm("Name: "+name+"\n"+ 
+                                              "Seating: "+seat+"\n"+
+                                              "Date: "+date+"\n"+
+                                              "Time: "+time+"\n"+
+                                              "Extra Comments: "+comments);
+            return false;
+         }
+      }
+  </script>
 </body>
 </html>

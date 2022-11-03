@@ -75,10 +75,7 @@ nav ul li:hover ul {
 /*h1 layout */
 body > div, body > h1 {
   padding-top:130px;
-}
-
-body > h1 { 
- min-height: 520px;
+  min-height: 520px;
 }
 
 /*footer styles */
