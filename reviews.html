@@ -12,6 +12,7 @@
    <link href="tasty_reset.css" rel="stylesheet" />
    <link href="tasty_layout.css" rel="stylesheet" />
    <link href="tasty_styles.css" rel="stylesheet" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <title>Mmm Tasty! It's a Pastry!</title>
 
    <style>
@@ -29,16 +30,12 @@
          border-radius: 10px;
       }
 
-      .review {
-         clear: left;
-      }
-
       .likeButton p{
          display: inline-block;
       }
 
       .btn {
-         width: 30px; height: 30px;
+         width: 20px; height: 20px;
          outline: 0;
          border: 2px solid rgb(209, 3, 3);
          background:rgb(209, 3, 3);
@@ -71,10 +68,20 @@
          color: #000;
          left: 5px;
          top: 4px;
-         
       }
 
+      .likeButton p  {
+         font-size: .75em;
+      }
 
+      #showmore {
+         display:block;
+      }
+
+      .showReview {
+         position: relative;
+         left: 30%;
+      }
 
    </style>
 </head>
@@ -107,7 +114,7 @@
          <h3>Reviews</h3>
       </div>
       <div class = "reviewSection">
-         <div class = "review">
+         <div class = "review" style="clear:left">
             <h2>Sheb Deaton</h2>
             <img src="shebreview.jpg" />
             <div class="quote" >
@@ -117,10 +124,9 @@
                   menu)</b>.
                </blockquote>
                <div class="likeButton">
-                  <p>Was this review helpful?</p>
+                  <p >Was this review helpful?</p>
                   <button class="btn btn-like">
-                      <span class="btn-icon ">
-                          
+                      <span class="btn-icon ">   
                       </span>
                   </button>
                </div>
@@ -136,6 +142,79 @@
                   Everytime I come here, the staff and pastries just leave me with a big smile on my face. I love coming
                   here, especially the location on Nelson Road!
                </blockquote>
+               <div class="likeButton">
+                  <p>Was this review helpful?</p>
+                  <button class="btn btn-like">
+                      <span class="btn-icon ">   
+                      </span>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class = "reviewSection">
+         <div class = "review">
+            <h2>Hafsah Khan</h2>
+            <img src="hafsahreview.jpg" />
+            <div class="quote">
+               <blockquote>
+                  I've eaten pastries from all around the world, I've traveled to France to try
+                  the best pastries, but these are just something else. Truly just something magical about
+                  their food. The doughnuts are literally <b>one-in-a-million</b>.
+               </blockquote>
+               <div class="likeButton">
+                  <p>Was this review helpful?</p>
+                  <button class="btn btn-like">
+                      <span class="btn-icon ">   
+                      </span>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="reviewSection showReview">
+         <button id="showmore">Show More Reviews</button>
+      </div>
+      <div class="hiddenReview" style="display:none">
+         <div class = "reviewSection">                      
+            <div class = "review">
+               <h2>Landon Arnold</h2>
+               <img src="landonreview.jpg" />
+               <div class="quote" >
+                  <blockquote>
+                     My family has been coming here for generations. It has brought our
+                     family together on so many occasions. For happy moment or sad moments,
+                     this bakery has been there with us every step of the way.
+                  </blockquote>
+                  <div class="likeButton">
+                     <p>Was this review helpful?</p>
+                     <button class="btn btn-like">
+                        <span class="btn-icon ">   
+                        </span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class = "reviewSection">
+            <div class = "review">
+               <h2>Sujal Joshi</h2>
+               <img src="Sujalreview.jpg" />
+               <div class="quote" >
+                  <blockquote>
+                     My grandmother used to make fresh blueberry doughnuts for me 
+                     everytime I visited her as a kid. This is the only place
+                     that makes them just as good as she did. 10/10 would recommend
+                     everything here!
+                  </blockquote>
+                  <div class="likeButton">
+                     <p>Was this review helpful?</p>
+                     <button class="btn btn-like">
+                        <span class="btn-icon ">   
+                        </span>
+                     </button>
+                  </div>
+               </div>
             </div>
          </div>
       </div>
@@ -150,11 +229,43 @@
 
    <!--Javascript Function-->
    <script type="text/javascript">
-      const button = document.querySelector('.btn')
-
-      button.addEventListener('click', () => {
-          button.classList.toggle('btn-like')
+      const buttons = document.querySelectorAll(".btn");
+/*
+      for (var i=0; i<2; i++) {
+            buttons[i].addEventListener('click', () => {
+               buttons[i].classList.toggle('btn-like')
+            });
+      }
+*/
+      buttons[0].addEventListener('click', () => {
+         buttons[0].classList.toggle('btn-like')
       })
+
+      buttons[1].addEventListener('click', () => {
+         buttons[1].classList.toggle('btn-like')
+      })
+
+      buttons[2].addEventListener('click', () => {
+         buttons[2].classList.toggle('btn-like')
+      })
+
+      buttons[3].addEventListener('click', () => {
+         buttons[3].classList.toggle('btn-like')
+      })
+      buttons[4].addEventListener('click', () => {
+         buttons[4].classList.toggle('btn-like')
+      })
+  </script>
+  <script>
+   $('#showmore').on('click', function() {
+      console.log();
+      $('.hiddenReview').toggle();
+      if($(this).text() == 'Show More Reviews'){
+           $(this).text('Show Less Reviews');
+       } else {
+           $(this).text('Show More Reviews');
+       }
+   })
   </script>
 </body>
 </html>
