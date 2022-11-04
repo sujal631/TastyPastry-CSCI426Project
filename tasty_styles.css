@@ -186,8 +186,17 @@ blockquote::after{
   font-size: 50px;
   position: relative;
   display: inline-block;
-  margin-bottom: 6%;
+  margin-bottom: 3%;
   text-shadow: -5px 5px 5px #abdbe3;
+}
+
+.reviewTitle:after {
+  content: "";
+  display: block;
+  height: 40px;
+  background-image: url(cupcakeBorder.png);
+  background-repeat: repeat;
+  background-position: center bottom;
 }
 
 h2 {
@@ -196,3 +205,4 @@ h2 {
   color: black;
   text-shadow: 2px 2px #ffc7f6;
 }
+
