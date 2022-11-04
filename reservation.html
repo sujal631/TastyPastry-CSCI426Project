@@ -12,6 +12,7 @@
    <link href="tasty_reset.css" rel="stylesheet" />
    <link href="tasty_layout.css" rel="stylesheet" />
    <link href="tasty_styles.css" rel="stylesheet" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <title>Mmm Tasty! It's a Pastry!</title>
    <style>
       form {
@@ -33,6 +34,8 @@
          margin-top: 10px;
          height: 100px;
          width: 95%;
+         border-radius: 10px;
+         background-color: #ffc7f6;
       }
 
       div.formRow {
@@ -51,6 +54,8 @@
       label {
          text-align: center;
          vertical-align: center;
+         color: #ffc7f6;
+         text-shadow: 0px 2px 4px black
       }
 
       figure {
@@ -68,9 +73,11 @@
          padding: 5px;
          margin-top: 1px;
          border-radius: 25px;
-         background-color: #abdbe3;
-         color: #ffc7f6;
-         text-shadow: 0px 2px 4px black
+      }
+
+      input {
+         border-radius: 25px;
+         background-color: #ffc7f6;
       }
 
       .Radio {
@@ -104,6 +111,22 @@
          border-radius: 10px;
          vertical-align: top;
          border: 2px solid #abdbe3;
+      }
+
+      .contrast {
+         color: black;
+         background-color: white;
+         text-shadow: none;
+      }
+
+      .PinkSet {
+         background-color: #ffc7f6;
+      }
+
+      .ButSet {
+         background-color: #abdbe3;
+         color: #ffc7f6;
+         text-shadow: 0px 2px 4px black
       }
    </style>
 </head>
@@ -139,52 +162,62 @@
       <!--Images of Place-->
       <div class="Exterior_Interior">
          <figure style="float: left;">
-            <img src="exterior.jpg" >
-            <figcaption> Exterior View </figcaption>
+            <img src="exterior.jpg" alt="Exterior View of Restaurant">
+            <figcaption> <b>Exterior View</b> </figcaption>
          </figure>
          <figure style="float: left;">
-            <img src="interior.jpg">
-            <figcaption> Interior View </figcaption>
+            <img src="interior.jpg" alt="Interior View of Restaurant">
+            <figcaption> <b>Interior View</b> </figcaption>
          </figure>
       </div>
       <!--Form-->
       <form action="http://www.example.com/redball/customer" method="post">
-         <fieldset>
+         <fieldset >
             <!--Name of Reservation-->
             <div class="formRow">
-               <label for="name" style="color: #ffc7f6; text-shadow: 0px 2px 4px black">Name:</label>
-               <input name="reserver" id="name" type="text" placeholder="first and last name" required style="background-color: #ffc7f6;" />
+               <label for="name">Name:*</label>
+               <input name="reserver" id="name" type="text" placeholder="first and last name" required/>
             </div>
             <!--Type of Seating for Reservation-->
             <div class="formRow">
-               <label style="color: #ffc7f6; text-shadow: 0px 2px 4px black">Where would you like to sit?</label>
-               <fieldset style="background-color: #ffc7f6;">
-                  <label class="Radio" for="Interior">Inside</label>
+               <label style=>Where would you like to sit?*</label>
+               <fieldset class="PinkSet" id="RadBut">
+                  <label class="Radio" for="Interior" style="color: black; text-shadow:none;">Inside</label>
                   <input class="Radio" name="Seating" id="Interior" value="Inside" type="radio" required />
-                  <label class="Radio" for="Exterior">Outside</label>
+                  <label class="Radio" for="Exterior" style="color: black; text-shadow:none;">Outside</label>
                   <input class="Radio" name="Seating" id="Exterior" value="Outside" type="radio" />
                </fieldset>
             </div>
+            <!--Number of People-->
+            <div class="formRow">
+               <label for="quantity">How many people are you with?*</label>
+               <input name="quantity" id="quantity" type="number"
+                      value="1" step="1" min="1" max="8" required/>
+            </div>
             <!--Date of Reservation-->
             <div class="formRow">
-               <label for="date" style="color: #ffc7f6; text-shadow: 0px 2px 4px black">Date of Reservation:</label>
-               <input name="reservation" id="date" type="date" required style="background-color: #ffc7f6;" />
+               <label for="date">Date of Reservation:*</label>
+               <input name="reservation" id="date" type="date" required>
             </div>  
             <!--Time of Reservation-->
             <div class="formRow">
-               <label for="time" style="color: #ffc7f6; text-shadow: 0px 2px 4px black">Time of Reservation:</label>
-               <input name="reservation" id="time" type="time" required style="background-color: #ffc7f6;"/>
+               <label for="time">Time of Reservation:*</label>
+               <input name="reservation" id="time" type="time" required/>
             </div>
             <!--Comments for Reservation-->
             <div class="formRow">
-               <textarea id="comments" name="comments" placeholder="Comments for Reservation" style="background-color: #ffc7f6;"></textarea>
+               <textarea id="comments" name="comments" placeholder="Comments for Reservation"></textarea>
             </div>
          </fieldset>
          <!--Submit/Cancel Buttons-->
+         
          <div id="buttons">
-            <input type="submit" value="Submit Reservation" />
-            <input type="reset" value="Cancel" />
+            <p style="float:left;"><em >* = Required</em></p>
+            <input class="ButSet" id='sub' type="submit" value="Submit Reservation" />
+            <input class="ButSet" id='res' type="reset" value="Cancel" />
+            
          </div>
+         <button id="Contrast" class="contrast" style="border-radius: 5px;">High Contrast</button>
       </form>
    </div>
 
@@ -207,18 +240,48 @@
             var date = document.getElementById("date").value;
             var time = document.getElementById("time").value;
             var seat = document.getElementsByName("Seating");
+            var amount = document.getElementById("quantity").value;
             for(i=0;i<seat.length;i++) {
                if(seat[i].checked)
                   seat = seat[i].value;
             }
             if (this.checkValidity()) confirm("Name: "+name+"\n"+ 
                                               "Seating: "+seat+"\n"+
+                                              "For: "+amount+" people\n"+
                                               "Date: "+date+"\n"+
                                               "Time: "+time+"\n"+
                                               "Extra Comments: "+comments);
             return false;
          }
       }
+  </script>
+  <!--JavaQuery Function-->
+  <script>
+   $('#Contrast').on('click', function() {
+      if($(this).text() == 'High Contrast'){
+           $("label").toggleClass('contrast');
+           $("input").toggleClass('contrast');
+           $("fieldset").toggleClass('contrast');
+           $("textarea").toggleClass('contrast');
+           $('#RadBut').toggleClass('PinkSet');
+           $('#sub').toggleClass('ButSet');
+           $('#res').toggleClass('ButSet');
+           $(this).toggleClass('ButSet');
+           $(this).toggleClass('contrast');
+           $(this).text('Low Contrast');
+       } else {
+           $("label").toggleClass('contrast');
+           $("input").toggleClass('contrast');
+           $("fieldset").toggleClass('contrast');
+           $("textarea").toggleClass('contrast');
+           $('#RadBut').toggleClass('PinkSet');
+           $('#sub').toggleClass('ButSet');
+           $('#res').toggleClass('ButSet');
+           $(this).toggleClass('ButSet');
+           $(this).toggleClass('contrast');
+           $(this).text('High Contrast');
+       }
+   })
   </script>
 </body>
 </html>
