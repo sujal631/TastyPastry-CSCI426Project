@@ -176,7 +176,6 @@ blockquote::after{
 
 .reviewTitle {
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .reviewTitle h3 {
@@ -186,7 +185,6 @@ blockquote::after{
   font-size: 50px;
   position: relative;
   display: inline-block;
-  margin-bottom: 3%;
   text-shadow: -5px 5px 5px #abdbe3;
 }
 
