@@ -98,6 +98,7 @@ body > footer address {
   padding-right: 5px;
 }
 
+/* menu- like pastry styles */
 .like{
   cursor: pointer;
   color: #868585;
@@ -126,6 +127,7 @@ body > footer address {
   }
 }
 
+/* menu - load more styles*/
 #load-more{
   margin-bottom: 40px;
   margin-left: 12%;
