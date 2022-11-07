@@ -167,7 +167,6 @@ blockquote::after{
 
 .reviewTitle {
   text-align: center;
-  margin-bottom: 10px;
 }
 
 .reviewTitle h3 {
@@ -177,23 +176,22 @@ blockquote::after{
   font-size: 50px;
   position: relative;
   display: inline-block;
-  margin-bottom: 3%;
   text-shadow: -5px 5px 5px #abdbe3;
 }
 
-.reviewTitle:after {
-  content: "";
-  display: block;
-  height: 40px;
-  background-image: url(cupcakeBorder.png);
-  background-repeat: repeat;
-  background-position: center bottom;
-}
 
 h2 {
   font-family: Cake, sans-serif;
   font-size: 2em;
   color: black;
   text-shadow: 2px 2px #ffc7f6;
+}
+
+#showmore {
+  background-color: #abdbe3;
+  color: black;
+  border-radius: 10px;
+  height: 2em;
+  border-color: #abdbe3;
 }
 
