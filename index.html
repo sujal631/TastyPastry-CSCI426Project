@@ -1,13 +1,7 @@
 <!doctype html>
 <html>
 <head>
-   <!--
-   Mmm Tasty! It's a Pastry! Website Request Home Page
-   Author: Landon Arnold
-   Date:   11/2/22
-   
-   Filename: index.html
-   -->
+
    <meta charset="utf-8" />
    <link href="tasty_reset.css" rel="stylesheet" />
    <link href="tasty_layout.css" rel="stylesheet" />
@@ -19,7 +13,7 @@
 <body>
    <!--header picture and title of page-->
    <header>
-      
+      <img src="headerattempt4.jpg" alt="Mmm Tasty! It's a Pastry!" />
       <p>Mmm Tasty! It's a Pastry!</p>
    </header>
    
@@ -38,8 +32,20 @@
       </ul>
    </nav>
    
-   <!--Home Page-->
-   <h1>Home</h1>
+   <!--H1-->
+   <div class = "title">
+      <h4><font color="blue">Warm and Tasty</font></h4></br>
+      <h4><font color="red">It's A Pastry</font></h4>
+   </div>
+   <h1>Welcome to Mmm Tasty! It's a Pastry!</h1>
+   $(document).ready(function()){
+      $("button").click(function(){
+         $("p").hide();
+      });
+   });
+   <p>
+      We have many different delicious donuts and other pastries to choose from.
+   </p>
   
    <!--footer-->
    <footer>
