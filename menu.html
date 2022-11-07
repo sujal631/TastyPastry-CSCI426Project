@@ -9,10 +9,92 @@
    Filename: menu.html
    -->
    <meta charset="utf-8" />
+   <!-- css file links-->
    <link href="tasty_reset.css" rel="stylesheet" />
    <link href="tasty_layout.css" rel="stylesheet" />
    <link href="tasty_styles.css" rel="stylesheet" />
+
+   <!-- font awesome cdn link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
    <title>Mmm Tasty! It's a Pastry!</title>
+
+   <style>
+      .wrapper
+      {
+         width: 100%;
+         margin: 0 auto;
+         text-align: center;
+      }
+
+      .wrapper .heading
+      {
+         font-family: Cake, sans-serif;
+         color: black;
+         text-transform: capitalize;
+         font-size: 50px;
+         position: relative;
+         display: inline-block;
+         margin-bottom: 25px;
+         text-shadow: -5px 5px 5px #abdbe3;
+      }
+
+      .wrapper .box-container
+      {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+         gap: 20px;
+         width: 72%;
+         margin: 0 5% 2% 5%;
+      }
+
+      .wrapper .box-container .box
+      {
+         background-color: #fff;
+         border: 1px solid rgb(138, 132, 132);
+         border-radius: 10px;
+         padding: 20px;
+         box-shadow: -5px 5px 5px #ffc7f6;
+         display: none;
+      }
+
+      .wrapper .box-container .box .image
+      {
+         margin-bottom: 20px;
+         overflow: hidden;
+         height: 275px;
+       
+      }
+
+      .wrapper .box-container .box .image img
+      {
+         max-height: 275px;
+         max-width: 275px;
+         object-fit: cover;
+         border: 1px solid rgb(214, 210, 210);
+         border-radius: 10px;  
+      }
+
+      .wrapper .box-container .box:hover .image img
+      {
+         transform: scale(1.05);
+      }
+
+      .wrapper .box-container .box .content h3
+      {
+         color: black;
+         font-size: 1.5em;
+         font-family: Cake, sans-serif;
+      }
+
+      .wrapper .box-container .box .content p
+      {
+         color: crimson;
+         font-size: 1.3em;
+         font-family: Cake, sans-serif;
+         padding: 15px ;
+      }
+   </style>
 
 </head>
 
@@ -38,80 +120,191 @@
    </nav>
    
    <!--Menu-->
-   <div class="wrapper">
-      <div class="title">
-         <h4>Pick your tasty pastry</h4>
-      </div>
-      <div class="menu">
-         <div class="single-menu">
-            <img src="images/menu-1.jpg" alt="">
-            <div class="menu-content">
-               <h4>Rapsberry Sugar Doughnut Holes<span>$6.99</span></h4>
+   <div class="wrapper" >
+
+      <h1 class="heading" style="margin-top: 2%">Pick your Tasty Pastry!</h1>
+
+      <div class="box-container" style="margin-left: 20%; padding:1px 15px;">
+         <div class="box">
+            <div class="image">
+               <img src="images/menu-1.jpg" alt="">
+            </div>
+            <div class="content">
+               <h3>Rapsberry Sugar Doughnut Holes</h3>
+               <p>$6.99</p>
+
+               <div class="icons">
+                  <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
+               </div>
             </div>
          </div>
-         <div class="single-menu">
-            <img src="images/menu-2.jpg" alt="">
-            <div class="menu-content">
-               <h4>Red Velvet Macarons<span>$6.99</span></h4>
+
+         <div class="box">
+            <div class="image">
+               <img src="images/menu-2.jpg" alt="">
+            </div>
+            <div class="content">
+               <h3>Red Velvet Macarons</h3>
+               <p>$6.99</p>
+
+               <div class="icons">
+                  <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
+               </div>
             </div>
          </div>
-         <div class="single-menu">
-            <img src="images/menu-3.jpg" alt="">
-            <div class="menu-content">
-               <h4>Red Velvet Cupcake<span>$6.99</span></h4>
+
+         <div class="box">
+            <div class="image">
+               <img src="images/menu-3.jpg" alt="">
+            </div>
+            <div class="content">
+               <h3>Red Velvet Cupcake</h3>
+               <p>$6.99</p>
+
+               <div class="icons">
+                  <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
+               </div>
             </div>
          </div>
-         <div class="single-menu">
-            <img src="images/menu-4.jpg" alt="">
-            <div class="menu-content">
-               <h4>Red Velvet Cake <span>$6.99</span></h4>
+
+         <div class="box">
+            <div class="image">
+               <img src="images/menu-4.jpg" alt="">
+            </div>
+            <div class="content">
+               <h3>Red Velvet Cake </h3>
+               <p>$6.99</p>
+
+               <div class="icons">
+                  <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
+               </div>
             </div>
          </div>
-         <div class="single-menu">
-            <img src="images/menu-5.jpg" alt="">
-            <div class="menu-content">
-               <h4>Raspberry Rose Chocolate Cupcake<span>$6.99</span></h4>
+
+
+         <div class="box">
+            <div class="image">
+               <img src="images/menu-5.jpg" alt="">
+            </div>
+            <div class="content">
+               <h3>Raspberry Rose Chocolate Cupcake</h3>
+               <p>$6.99</p>
+
+               <div class="icons">
+                  <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
+               </div>
             </div>
          </div>
-         <div class="single-menu">
-            <img src="images/menu-6.jpg" alt="">
-            <div class="menu-content">
-               <h4>Puff Pastry Doughnut<span>$6.99</span></h4>
+
+
+         <div class="box">
+            <div class="image">
+               <img src="images/menu-6.jpg" alt="">
+            </div>
+            <div class="content">
+               <h3>Puff Pastry Doughnut</h3>
+               <p>$6.99</p>
+
+               <div class="icons">
+                  <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
+               </div>
             </div>
          </div>
-         <div class="single-menu">
-            <img src="images/menu-7.jpg" alt="">
-            <div class="menu-content">
-               <h4>Cinnamon Puff Pastry Hearts<span>$6.99</span></h4>
+
+         <div class="box">
+            <div class="image">
+               <img src="images/menu-7.jpg" alt="">
+            </div>
+            <div class="content">
+               <h3>Cinnamon Puff Pastry Hearts</h3>
+               <p>$6.99</p>
+
+               <div class="icons">
+                  <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
+               </div>
             </div>
          </div>
-         <div class="single-menu">
-            <img src="images/menu-8.jpg" alt="">
-            <div class="menu-content">
-               <h4>Brioche Doughnut<span>$6.99</span></h4>
+
+         <div class="box">
+            <div class="image">
+               <img src="images/menu-8.jpg" alt="">
+            </div>
+            <div class="content">
+               <h3>Brioche Doughnut</h3>
+               <p>$6.99</p>
+
+               <div class="icons">
+                  <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
+               </div>
             </div>
          </div>
-         <div class="single-menu">
-            <img src="images/menu-9.jpg" alt="">
-            <div class="menu-content">
-               <h4>Lemon Berry Cream Tart <span>$6.99</span></h4>
+
+         <div class="box">
+            <div class="image">
+               <img src="images/menu-9.jpg" alt="">
+            </div>
+            <div class="content">
+               <h3>Lemon Berry Cream Tart </h3>
+               <p>$6.99</p>
+
+               <div class="icons">
+                  <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
+               </div>
             </div>
          </div>
-         <div class="single-menu">
-            <img src="images/menu-10.jpg" alt="">
-            <div class="menu-content">
-               <h4>Paris Brest<span>$6.99</span></h4>
+
+         <div class="box">
+            <div class="image">
+               <img src="images/menu-10.jpg" alt="">
+            </div>
+            <div class="content">
+               <h3>Paris Brest</h3>
+               <p>$6.99</p>
+
+               <div class="icons">
+                  <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
+               </div>
             </div>
          </div>
+   
+      </div> 
+      
+      <div id="load-more">
+         Load More Pastries
       </div>
 
    </div>
-   </body>  
+
+   <script>
+      const loadMoreBtn = document.querySelector('#load-more');
+      let currentItem = 3;
+
+      loadMoreBtn.addEventListener('click', (e)  => {
+         const boxes = [...document.querySelectorAll('.wrapper .box-container .box')];
+         for( let i = currentItem; i < currentItem +3; i++ ){
+            if(boxes[i]){
+               boxes[i].style.display = 'inline-block';
+            }
+         }
+         currentItem += 3;
+
+         if(currentItem >= boxes.length){
+            event.target.style.display ='none';
+         }
+
+      })
+   </script>
+   
    <!--footer-->
    <footer>
       <address>
       All Rights Reserved &copy; Live Laugh Love Legion &#8226; Lake Charles, LA
       </address>
    </footer>
+
+   
+   
 </body>
 </html>
+
+

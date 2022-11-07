@@ -43,6 +43,8 @@ body > nav {
 
 nav > ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
   color: black;
   font-family: Cake, sans-serif;
   background-color: #ffc7f6;
@@ -77,62 +79,51 @@ body > footer address {
 }
 
 /* menu styles */
-.wrapper {
-  width: 100%;
-  margin: 40px auto;
-}
-
-.title {
-  text-align: center;
-  margin-bottom: 10px;
-}
-.title h4 {
-  font-family: Cake, sans-serif;
-  color: black;
-  text-transform: capitalize;
-  font-size: 50px;
-  position: relative;
-  display: inline-block;
-  margin-bottom: 40px;
-}
-.menu {
+.wrapper .box-container .box .content .icons{
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;         
   justify-content: space-between;
-}
-.single-menu {
-  flex-basis: 450px;
-  margin: 15px;
-  padding: 10px;
-  border: 1px solid rgb(236, 236, 236);
-  display: flexbox;
-  flex-direction: row;
-  align-items: center;
-}
-.single-menu:hover img {
-  border-radius: 0;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top:1px solid #000 ;
 }
 
-.single-menu img {
-  max-width: 400px;
-  max-height: 400px;
-  margin: 5px;
-  margin-bottom: 10px;
+.wrapper .box-container .box .content .icons span{
+  font-size: 14px;
+  color: #777;
+}
+
+.wrapper .box-container .box .content .icons span i{
+  color: crimson;
+  padding-right: 5px;
+}
+
+#load-more{
+  margin-bottom: 40px;
+  margin-left: 12%;
+  display:inline-block;
+  padding: 13px 30px;
   border: 1px solid #000;
-  border-radius: 10%;
+  border-radius: 10px;
+  color: #000;
+  font-size: 16px;
+  background-color: #fff;
+  cursor: pointer;
+
 }
-.single-menu h4 {
-  text-transform: none;
-  font-size: 15px;
-  padding-bottom: 5px;
-  border-bottom: 1px dashed #000;
-  margin-bottom: 5px;
+
+#load-more:hover{
+  background-color: crimson;
+  border-color: crimson;
+  border-radius: 10px;
+  color: #fff;
+  transition: 1s;
 }
-.single-menu h4 span {
-  float: right;
-  font-size: 20px;
-  color: #2f808f;
-  font-weight: bold;
+
+.wrapper .box-container .box:nth-child(1),
+.wrapper .box-container .box:nth-child(2),
+.wrapper .box-container .box:nth-child(3){
+  display: inline-block;
 }
 
 /* Reviews Page */
