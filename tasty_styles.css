@@ -98,6 +98,34 @@ body > footer address {
   padding-right: 5px;
 }
 
+.like{
+  cursor: pointer;
+  color: #868585;
+  font-size: 1.5em;
+}
+
+.heart i.fa-heart{
+  color: #f44336;
+}
+.heart{
+  animation: heart 0.5s linear;
+}
+
+@keyframes heart{
+  0%{
+    transform: rotate(0deg) scale(1.7);
+  }
+  40%{
+    transform: rotate(0deg) scale(1);
+  }
+  41%{
+    transform: rotate(360deg) scale(1);
+  }
+  100%{
+    transform: rotate(0deg) scale(1);
+  }
+}
+
 #load-more{
   margin-bottom: 40px;
   margin-left: 12%;

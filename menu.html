@@ -17,6 +17,8 @@
    <!-- font awesome cdn link -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
    <title>Mmm Tasty! It's a Pastry!</title>
 
    <style>
@@ -131,9 +133,12 @@
             </div>
             <div class="content">
                <h3>Rapsberry Sugar Doughnut Holes</h3>
-               <p>$6.99</p>
+               <p>$8.99</p>
 
                <div class="icons">
+                  <div class="like">
+                     <i class="fa-solid fa-heart"></i>
+                  </div>
                   <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
                </div>
             </div>
@@ -148,6 +153,9 @@
                <p>$6.99</p>
 
                <div class="icons">
+                  <div class="like">
+                     <i class="fa-solid fa-heart"></i>
+                  </div>
                   <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
                </div>
             </div>
@@ -159,9 +167,12 @@
             </div>
             <div class="content">
                <h3>Red Velvet Cupcake</h3>
-               <p>$6.99</p>
+               <p>$4.99</p>
 
                <div class="icons">
+                  <div class="like">
+                     <i class="fa-solid fa-heart"></i>
+                  </div>
                   <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
                </div>
             </div>
@@ -173,9 +184,12 @@
             </div>
             <div class="content">
                <h3>Red Velvet Cake </h3>
-               <p>$6.99</p>
+               <p>$8.99</p>
 
                <div class="icons">
+                  <div class="like">
+                     <i class="fa-solid fa-heart"></i>
+                  </div>
                   <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
                </div>
             </div>
@@ -188,9 +202,12 @@
             </div>
             <div class="content">
                <h3>Raspberry Rose Chocolate Cupcake</h3>
-               <p>$6.99</p>
+               <p>$7.99</p>
 
                <div class="icons">
+                  <div class="like">
+                     <i class="fa-solid fa-heart"></i>
+                  </div>
                   <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
                </div>
             </div>
@@ -203,9 +220,12 @@
             </div>
             <div class="content">
                <h3>Puff Pastry Doughnut</h3>
-               <p>$6.99</p>
+               <p>$3.99</p>
 
                <div class="icons">
+                  <div class="like">
+                     <i class="fa-solid fa-heart"></i>
+                  </div>
                   <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
                </div>
             </div>
@@ -217,9 +237,12 @@
             </div>
             <div class="content">
                <h3>Cinnamon Puff Pastry Hearts</h3>
-               <p>$6.99</p>
+               <p>$3.99</p>
 
                <div class="icons">
+                  <div class="like">
+                     <i class="fa-solid fa-heart"></i>
+                  </div>
                   <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
                </div>
             </div>
@@ -234,6 +257,9 @@
                <p>$6.99</p>
 
                <div class="icons">
+                  <div class="like">
+                     <i class="fa-solid fa-heart"></i>
+                  </div>
                   <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
                </div>
             </div>
@@ -245,9 +271,12 @@
             </div>
             <div class="content">
                <h3>Lemon Berry Cream Tart </h3>
-               <p>$6.99</p>
+               <p>$9.99</p>
 
                <div class="icons">
+                  <div class="like">
+                     <i class="fa-solid fa-heart"></i>
+                  </div>
                   <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
                </div>
             </div>
@@ -259,9 +288,12 @@
             </div>
             <div class="content">
                <h3>Paris Brest</h3>
-               <p>$6.99</p>
+               <p>$5.99</p>
 
                <div class="icons">
+                  <div class="like">
+                     <i class="fa-solid fa-heart"></i>
+                  </div>
                   <span><i class="fas fa-user"></i> by Mmm Tasty! It's a Pastry!</span>
                </div>
             </div>
@@ -295,6 +327,13 @@
       })
    </script>
    
+   <script>
+      $(document).ready(function(){
+         $('.like').click(function(){
+            $(this).toggleClass("heart");
+         });
+      });
+   </script>
    <!--footer-->
    <footer>
       <address>
