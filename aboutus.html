@@ -7,38 +7,37 @@
    <link href="tasty_layout.css" rel="stylesheet" />
    <link href="tasty_styles.css" rel="stylesheet" />
    <title>Mmm Tasty! It's a Pastry!</title>
-
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <style>
-      .mission__location{
-	display: flex;
-	align-items: center;
-	list-style:none;
-}
-.missionandlocation{
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	padding: 0 1rem;
-	width:100%;
-
-}
-.mission__toggle{
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	width:125px;
-	text-decoration:none;
-	height:60px;
-	width:300px;
-	border:none;
-	outline:none;
-	border-radius:4px;
-	background:#833ab4;
-	background:-webkit-linear-gradient(to right,#fcb045,#fd1d1d,#833ab4);
-	background:linear-gradient(to right,#fcb045,#fd1d1d,#833ab4);
-	color:#fff;
-	transition: all 0.3s ease;
-}
+       .mission__location{
+	     display: flex;
+	     align-items: center;
+	     list-style:none;
+   }
+       .missionandlocation{
+	     display:flex;
+	     justify-content:center;
+	     align-items:center;
+	     padding: 0 1rem;
+	     width:100%;
+   }
+       .mission__toggle{
+	     display:flex;
+	     align-items:center;
+	     justify-content:center;
+	     width:125px;
+	     text-decoration:none;
+	     height:60px;
+	     width:300px;
+	     border:none;
+	     outline:none;
+	     border-radius:4px;
+	     background:#833ab4;
+	     background:-webkit-linear-gradient(to right,#fcb045,#fd1d1d,#833ab4);
+	     background:linear-gradient(to right,#fcb045,#fd1d1d,#833ab4);
+	     color:#fff;
+	     transition: all 0.3s ease;
+   }
    </style>
 
 </head>
@@ -77,7 +76,7 @@
                 , your tastes and your time. That is why we have the bests donuts in the area.</p>
     </div>
    </div>
-
+ 
    <!-- Mission-->
    <div class="Donouts" id= "ourMission">
     <div class="Donuts__container" id ="contents__donuts">
@@ -87,8 +86,25 @@
                  donuts healthy. Our newly found donuts are packed with healthy nutrion and is lesser in calories. </p>
     </div>
    </div>
-
+   <div class="showmorelocation">
+   <div class="alignment">
+    <button class="buttonButton1" id="clickTosee">Click to Hide Location</button>
+    </div>
+    </div>
+    <script>
+       $('#clickTosee').on('click', function() {
+      console.log();
+      $('#showandhide').toggle();
+      if($(this).text() == 'Show the location Tab'){
+           $(this).text('Hide the location tab');
+       } else {
+           $(this).text('Show the location Tab');
+       }
+   })
+    </script>
    <!-- Locations-->
+
+   <div id ="showandhide">
    <div class="Locations" id= "maps">
     <div class="location__container">
       <h1 class="Donouts__statement"> Our Locations</h1>
@@ -108,6 +124,7 @@
       <button class="buttonButton1" id="prevBtn">Prev</button>
       <button class="buttonButton2"id="nextBtn">Next</button>
     </div>
+   </div>
    </div>
     <script src="Script1.js"></script>
    <!--footer-->
