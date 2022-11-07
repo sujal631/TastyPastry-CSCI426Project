@@ -231,7 +231,7 @@ h2 {
 #aboutus{
   font-size: 3em;
   color:#000000;
-  font-family:papyrus;
+  font-family:Cake,sans-serif;
   text-align: center;
 }
 #ourmission
@@ -246,7 +246,7 @@ h2 {
 #Goals{
      background: #FFFFFF;
      background: linear-gradient(to right, #161616 #000000);
-     padding: 275px 0;
+     padding: 0px 0;
 }
 #contents__donuts{
 	 display: flex;
@@ -257,7 +257,7 @@ h2 {
      margin: 0 auto;
      height: 90%;
      text-align: center;
-     padding: 30px;
+     padding: 0px;
 }
 
 .Donouts__statement{
@@ -277,7 +277,7 @@ h2 {
 .Locations{
      background: #FFFFFF;
      background: linear-gradient(to right, #161616 #000000);
-     padding: 200px 0;
+     padding: 0px 0;
 }
 .location__container{
 	 display: flex;
@@ -288,7 +288,7 @@ h2 {
      margin: 0 auto;
      height: 90%;
      text-align: center;
-     padding: 30px;
+     padding: 0px;
 }
 .carousel-container{
 	margin:10px;
