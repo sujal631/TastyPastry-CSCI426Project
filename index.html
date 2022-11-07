@@ -2,18 +2,103 @@
 <html>
 <head>
 
+   <!--
+   Mmm Tasty! It's a Pastry! Website Home Page
+   Author: Landon Arnold
+   Date:   11/7/22
+   
+   Filename: index.html
+   -->
+
    <meta charset="utf-8" />
    <link href="tasty_reset.css" rel="stylesheet" />
    <link href="tasty_layout.css" rel="stylesheet" />
    <link href="tasty_styles.css" rel="stylesheet" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <title>Mmm Tasty! It's a Pastry!</title>
+   <style>
+      .hometitle {
+         text-align: center;
+      }
+
+      .hometitle h1 {
+         font-family: Cake, sans-serif;
+         color: black;
+         text-transform: capitalize;
+         font-size: 50px;
+         position: relative;
+         display: inline-block;
+         text-shadow: -5px 5px 5px #abdbe3;
+      }
+
+      .homeSection
+      {
+         text-align:center;
+         font-family: Cake, sans-serif;
+         color: black;
+         text-shadow: -5px 5px 5px #abdbe3;
+         font-size: 20px;
+      }
+      .homeSection img {
+         float: left;
+         width: 20%;
+         margin: 5px 20px 10px 0px;
+         border-radius: 10px;
+      }
+
+      .wrapper .box-container{
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+         gap: 20px;
+         width: 72%;
+         margin: 0 5% 2% 5%;
+      }
+
+      .wrapper .box-container .box{
+         background-color: #fff;
+         border-radius: 10px;
+         padding: 20px;
+
+      }
+
+      .wrapper .box-container .box .image{
+         overflow: hidden;
+         height: 200px;
+       
+      }
+
+      .wrapper .box-container .box .content {
+         text-align:center;
+         font-family: Cake, sans-serif;
+         color: black;
+         text-shadow: -5px 5px 5px #abdbe3;
+         font-size: 40px;
+         vertical-align: middle;
+      }
+
+      .wrapper .box-container .box .image img{
+         max-height: 400px;
+         max-width: 400px;
+         object-fit: cover;
+         border: 1px solid rgb(214, 210, 210);
+      }
+
+
+      .button {
+         color: #87CEEB;
+         font-size: 20px;
+         fill: pink;
+         text-decoration: none;
+         border:#87CEEB;
+      }
+
+   </style>
 
 </head>
 
 <body>
    <!--header picture and title of page-->
    <header>
-      <img src="headerattempt4.jpg" alt="Mmm Tasty! It's a Pastry!" />
       <p>Mmm Tasty! It's a Pastry!</p>
    </header>
    
@@ -33,19 +118,58 @@
    </nav>
    
    <!--H1-->
-   <div class = "title">
-      <h4><font color="blue">Warm and Tasty</font></h4></br>
-      <h4><font color="red">It's A Pastry</font></h4>
+   <div class = "wrapper">
+      <div class = "hometitle">
+         <h1><font color = "pink">Warm and Tasty</font></br><font color = "#87CEEB">It's A Pastry</font></h1>
+      </div>
+      <div class="box-container" style="margin-left: 20%; padding:1px 10px;">
+         <div class="box">
+            <div class="image">
+               <img src="images/menu-1.jpg" alt="">
+            </div>
+            
+         </div>
+         <div class = "box">
+            <div class="image">
+               <img src="images/menu-3.jpg" alt="">
+            </div>
+         </div>
+
+         <div class = "box">
+            <div class="content">
+               <p>See what other tasty pastries we have!
+                  </br>
+                  <button>
+                     <a class="button" href="menu.html">Menu</a>
+                  </button>
+               </p>
+            </div>
+         </div>
+         
+         <div class="box">
+            <div class ="image">
+               <img src="exterior.jpg" alt="exterior">
+            </div>
+         </div>
+
+         <div class = "box">
+            <div class = "content">
+               <p>Book a reservation with us
+               </br>
+               <button>
+                  <a class="button" href="reservation.html">Reservations</a>
+               </button>
+               </p>
+            </div>
+         </div>
+
+         <div class="box">
+            <div class="image">
+               <img src="interior.jpg" atl="interior">
+            </div>
+         </div>
+      </div>
    </div>
-   <h1>Welcome to Mmm Tasty! It's a Pastry!</h1>
-   $(document).ready(function()){
-      $("button").click(function(){
-         $("p").hide();
-      });
-   });
-   <p>
-      We have many different delicious donuts and other pastries to choose from.
-   </p>
   
    <!--footer-->
    <footer>
