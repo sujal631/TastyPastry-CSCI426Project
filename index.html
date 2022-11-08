@@ -25,25 +25,10 @@
          font-family: Cake, sans-serif;
          color: black;
          text-transform: capitalize;
-         font-size: 50px;
+         font-size: 80px;
          position: relative;
          display: inline-block;
          text-shadow: -5px 5px 5px #abdbe3;
-      }
-
-      .homeSection
-      {
-         text-align:center;
-         font-family: Cake, sans-serif;
-         color: black;
-         text-shadow: -5px 5px 5px #abdbe3;
-         font-size: 20px;
-      }
-      .homeSection img {
-         float: left;
-         width: 20%;
-         margin: 5px 20px 10px 0px;
-         border-radius: 10px;
       }
 
       .wrapper .box-container{
@@ -52,28 +37,30 @@
          gap: 20px;
          width: 72%;
          margin: 0 5% 2% 5%;
+         border: 5px solid rgb(138, 132, 132);
+         box-shadow: 10px 10px 10px 10px #ffc7f6;
+         border-radius: 20px;
+         border-color: #abdbe3;
       }
 
       .wrapper .box-container .box{
          background-color: #fff;
-         border-radius: 10px;
          padding: 20px;
-
       }
 
       .wrapper .box-container .box .image{
          overflow: hidden;
-         height: 200px;
+         height: 400px;
        
       }
 
-      .wrapper .box-container .box .content {
+      .wrapper .box-container .box .content p {
          text-align:center;
          font-family: Cake, sans-serif;
          color: black;
          text-shadow: -5px 5px 5px #abdbe3;
          font-size: 40px;
-         vertical-align: middle;
+         vertical-align:bottom;
       }
 
       .wrapper .box-container .box .image img{
@@ -81,8 +68,8 @@
          max-width: 400px;
          object-fit: cover;
          border: 1px solid rgb(214, 210, 210);
+         border-radius: 10px;
       }
-
 
       .button {
          color: #87CEEB;
@@ -90,6 +77,10 @@
          fill: pink;
          text-decoration: none;
          border:#87CEEB;
+      }
+
+      .showExtra {
+         position: relative;
       }
 
    </style>
@@ -122,30 +113,31 @@
       <div class = "hometitle">
          <h1><font color = "pink">Warm and Tasty</font></br><font color = "#87CEEB">It's A Pastry</font></h1>
       </div>
+      <!--Menu Box-->
       <div class="box-container" style="margin-left: 20%; padding:1px 10px;">
-         <div class="box">
-            <div class="image">
-               <img src="images/menu-1.jpg" alt="">
+            <div class="box">
+               <div class="image">
+                  <img src="images/menu-1.jpg" alt="">
+               </div>
             </div>
-            
-         </div>
-         <div class = "box">
-            <div class="image">
-               <img src="images/menu-3.jpg" alt="">
+            <div class="box">
+               <div class="image">
+                  <img src="chefmakingdonut.jpg" alt="">
+               </div>
+            </div>
+            <div class = "box">
+               <div class="content" style="margin-top:30%";>
+                  <p>Check out all the pastries that we offer!
+                     </br>
+                     <button>
+                        <a class="button" href="menu.html">Delicious Pastries</a>
+                     </button>
+                  </p>
+               </div>
             </div>
          </div>
-
-         <div class = "box">
-            <div class="content">
-               <p>See what other tasty pastries we have!
-                  </br>
-                  <button>
-                     <a class="button" href="menu.html">Menu</a>
-                  </button>
-               </p>
-            </div>
-         </div>
-         
+         <!--Reservation Box-->
+         <div class="box-container" style="margin-left: 20%; padding:1px 10px;">
          <div class="box">
             <div class ="image">
                <img src="exterior.jpg" alt="exterior">
@@ -153,7 +145,7 @@
          </div>
 
          <div class = "box">
-            <div class = "content">
+            <div class = "content" style="margin-top:30%;">
                <p>Book a reservation with us
                </br>
                <button>
@@ -162,15 +154,55 @@
                </p>
             </div>
          </div>
-
          <div class="box">
             <div class="image">
                <img src="interior.jpg" atl="interior">
             </div>
          </div>
       </div>
-   </div>
+
+      <!--contnent hidden until the user hits the show more button-->
+        <div class="box-container showExtra" style="margin-left: 20%; padding:1px 10px;">
+            <button id="showMore" style="display:block;">Show More</button>
+        </div>
+        <div class="hiddenContent" style="display:none;">
+            <div class="box-container" style="margin-left:20%; padding:1px 10px;">
+               <div class="box">
+                     <div class="content">
+                        <p>Check out our reviews from our customers!
+                        </br>
+                        <button>
+                           <a class="button" href="reviews.html">Reviews</a>
+                        </button>
+                        </p>
+                     </div>
+                  </div>
+               <div class="box">
+                  <div class="content">
+                     <p>Stop by one of our locations and see what we are about!
+                     </br>
+                     <button>
+                        <a class="button" href="aboutus.html">Locations and About Us</a>
+                     </button>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
   
+      <!--JQuery code for the show more button-->
+   <script>
+      $('#showMore').on('click', function() {
+         console.log();
+         $('.hiddenContent').toggle();
+         if($(this).text() == 'Show More'){
+               $(this).text('Show Less');
+            } else {
+               $(this).text('Show More');
+            }
+      })
+        </script>
+
    <!--footer-->
    <footer>
       <address>
