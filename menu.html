@@ -96,6 +96,48 @@
          font-family: Cake, sans-serif;
          padding: 15px ;
       }
+
+      .wrapper .box .content h2{
+         font-family: Cake, sans-serif;
+         color: black;
+         text-transform: capitalize;
+         font-size: 50px;
+         position: relative;
+         display: inline-block;
+         margin-bottom: 25px;
+         margin-top: 25px;
+         text-shadow: -5px 5px 5px #abdbe3;
+      }
+
+      #click{
+         margin-bottom: 40px;
+         display:inline-block;
+         padding: 13px 30px;
+         border: 1px solid #000;
+         border-radius: 10px;
+         color: #000;
+         font-size: 16px;
+         background-color: #fff;
+         cursor: pointer;
+
+         }
+
+      #click:hover{
+         background-color: crimson;
+         border-color: crimson;
+         color: #fff;
+         border-radius: 10px;
+         transition: 1s;
+      }
+
+      #click a{
+         color: #000;
+      }
+
+      #click a:hover{
+         color: #fff;
+      }
+
    </style>
 
 </head>
@@ -117,7 +159,7 @@
                <li><a href="reviews.html">Reviews</a></li>
             </ul>
          </li>
-		 <li><a href="http://localhost/TastyPastry-CSCI426Project/reservation.html">Reservations</a></li>
+		 <li><a href="reservation.html">Reservations</a></li>
       </ul>
    </nav>
    
@@ -125,6 +167,16 @@
    <div class="wrapper" >
 
       <!-- menu head-->
+      <div class = "box">
+         <div class = "content">
+            <h2>See Our Customers' Favourites</h2>
+            <br>
+            <div id="click">
+               <a class="button" href="menu.php">FAVOURITES</a>
+            </div>
+         </div>
+      </div>
+
       <h1 class="heading" style="margin-top: 2%">Pick your Tasty Pastry!</h1>
 
       <div class="box-container" style="margin-left: 20%; padding:1px 15px;">
