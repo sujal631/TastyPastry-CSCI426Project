@@ -351,12 +351,6 @@ h2 {
 .alignment{
 	float:none;
 }
-#footer{
-	position: absolute;
-	bottom:0;
-	width: 100%;
-	height:2.5rem;
-}
 #reservation1{
 	height:100%;
 }
