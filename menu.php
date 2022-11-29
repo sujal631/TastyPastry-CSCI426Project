@@ -4,9 +4,9 @@ d<!doctype html>
    <!--
    Mmm Tasty! It's a Pastry! Website Request Menu Page
    Author: Sujal Joshi
-   Date:   11/2/22
+   Date:   11/29/22
    
-   Filename: menu.html
+   Filename: menu.php
    -->
    <meta charset="utf-8" />
    <!-- css file links-->
@@ -27,7 +27,7 @@ d<!doctype html>
          width: 100%;
          margin: 0 auto;
          text-align: center;
-         min-height:856px;
+         min-height:1000px;
       }
 
       .wrapper .heading
@@ -84,7 +84,7 @@ d<!doctype html>
                <li><a href="reviews.html">Reviews</a></li>
             </ul>
          </li>
-		 <li><a href="reservation.html">Reservations</a></li>
+		 <li><a href="http://localhost/TastyPastry-CSCI426Project/reservation.html">Reservations</a></li>
       </ul>
    </nav>
    
@@ -94,7 +94,7 @@ d<!doctype html>
       <!-- menu head-->
 
       <h1 class="heading" style="margin-top: 2%">Customers' Favourites</h1>
-
+   <!-- Table -->
       <div class="favourites">
          <table>
          <tr>
@@ -103,8 +103,9 @@ d<!doctype html>
                <th>Price</th>
                <th>Likes</th>
          </tr>
+         <!-- Connecting to database to pull info -->
          <?php
-         $conn = mysqli_connect("localhost", "root", "", "itemsdb");
+         $conn = mysqli_connect("localhost", "root", "", "tastypastry");
          $sql = "SELECT * FROM items";
          $result = $conn->query($sql);
 

@@ -211,15 +211,10 @@
             <div id="buttons">
                <p style="float:left;"><em >* = Required</em></p>
                <input class="ButSet" id='sub' type="submit" value="Submit Reservation" />
+               <input class="ButSet" id='res' type="reset" value="Cancel" />
             </div>
          </fieldset>
          <!--Submit/Cancel Buttons-->
-         
-         <div id="buttons">
-            <p style="float:left;"><em >* = Required</em></p>
-            <input class="ButSet" id='res' type="reset" value="Cancel" />
-            
-         </div>
          <button id="Contrast" class="contrast" style="border-radius: 5px;">High Contrast</button>
       </form>
    </div>
@@ -231,12 +226,12 @@
       </address>
    </footer>
 
-   <!--Javascript Functions--
-   /*<script type="text/javascript">
-      For Form Validation*
+   <!--Javascript Functions-->
+   <script type="text/javascript">
+      /*For Form Validation*/
       window.onload = setForm;
       function setForm() {
-         /*Confirmation Box using Form Values
+         /*Confirmation Box using Form Values*/
          document.forms[0].onsubmit = function() {
             var name = document.getElementById("name").value;
             var comments = document.getElementById("comments").value;
@@ -254,10 +249,10 @@
                                               "Date: "+date+"\n"+
                                               "Time: "+time+"\n"+
                                               "Extra Comments: "+comments);
-            return false;
+            return true;
          }
       }
-  </script>*/
+  </script>
   <!--JavaQuery Function-->
   <script>
    $('#Contrast').on('click', function() {
